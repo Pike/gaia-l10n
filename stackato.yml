@@ -1,0 +1,17 @@
+name: gaia-l10n
+framework:
+    type: python
+    runtime: python27
+mem: 256M
+instances: 1
+requirements:
+    pip:
+        - mercurial
+        - "hg+https://bitbucket.org/pike/gaiaconv#egg=gaiaconv"
+        - python-hglib
+services:
+    repo-fs: filesystem
+processes:
+    web: $STACKATO_UWSGI --wsgi-file hgweb.wsgi
+cron:
+    - "*/15  *  *  *  *  $PYTHON $HOME/run-conversions.py repos.txt /app/fs/repo-fs/source/integration/ /app/fs/repo-fs/target/integration/ /app/fs/repo-fs/target/gaia-shamaps/ >> /app/logs/cron.log"
