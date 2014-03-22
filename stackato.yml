@@ -16,3 +16,4 @@ processes:
 cron:
     - "*/15  *  *  *  *  $PYTHON $HOME/run-conversions.py repos.txt /app/fs/repo-fs/source/integration/ /app/fs/repo-fs/target/integration/ /app/fs/repo-fs/target/gaia-shamaps/ >> /app/logs/cron.log"
     - "10    0  *  *  *  hg -R/app/fs/repo-fs/target/gaia-shamaps commit -m"`date "+Migration: %Y-%m-%d"`"
+    - "40    1  *  *  *  /usr/sbin/logrotate /app/app/app-logrotate.conf"
