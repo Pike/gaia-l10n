@@ -1,2 +1,6 @@
 [ui]
 username = gaia-l10n bot
+
+[extensions]
+strip=
+gaiaconv=
