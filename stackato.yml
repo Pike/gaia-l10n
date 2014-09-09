@@ -6,7 +6,7 @@ mem: 256M
 instances: 1
 requirements:
     pip:
-        - mercurial
+        - mercurial==3.0
         - "hg+https://bitbucket.org/pike/gaiaconv#egg=gaiaconv"
         - python-hglib
 services:
