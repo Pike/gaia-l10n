@@ -2,11 +2,11 @@ name: gaia-l10n
 framework:
     type: python
     runtime: python27
-mem: 256M
+mem: 512M
 instances: 1
 requirements:
     pip:
-        - mercurial==3.0
+        - mercurial==3.0.1
         - "hg+https://bitbucket.org/pike/gaiaconv#egg=gaiaconv"
         - python-hglib
 services:
@@ -14,6 +14,6 @@ services:
 processes:
     web: $STACKATO_UWSGI --wsgi-file hgweb.wsgi
 cron:
-    - "*/15  *  *  *  *  python $HOME/run-conversions.py repos.txt /app/fs/repo-fs/source/integration/ /app/fs/repo-fs/target/integration/ /app/fs/repo-fs/target/gaia-shamaps/ >> /app/logs/cron.log"
-    - '10    0  *  *  *  hg -R/app/fs/repo-fs/target/gaia-shamaps commit -m"`date "+Migration: %Y-%m-%d"`"'
+#    - "*/15  *  *  *  *  python $HOME/run-conversions.py repos.txt /app/fs/repo-fs/source/integration/ /app/fs/repo-fs/target/integration/ /app/fs/repo-fs/target/gaia-shamaps/ >> /app/logs/cron.log"
+#    - '10    0  *  *  *  hg -R/app/fs/repo-fs/target/gaia-shamaps commit -m"`date "+Migration: %Y-%m-%d"`"'
     - "40    1  *  *  *  /usr/sbin/logrotate /app/app/app-logrotate.conf"
