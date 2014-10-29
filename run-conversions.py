@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from optparse import OptionParser
+import os
 import os.path
 import subprocess
 import hglib
@@ -40,4 +41,6 @@ if __name__=='__main__':
     (options, args) = parser.parse_args()
     if len(args) != 4:
         parser.error('Call with repos.txt source target shamaps')
+    # set umask to make our generated file world-readable
+    os.umask(022)
     run_conversions(*args)
