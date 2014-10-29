@@ -2,7 +2,7 @@
 # See http://mercurial.selenic.com/wiki/modwsgi for more information
 
 # Path to repo or hgweb config to serve (see 'hg help hgweb')
-config = "hgweb.ini"
+config = "/var/www/app/hgweb.ini"
 
 # Uncomment and adjust if Mercurial is not installed system-wide
 # (consult "installed modules" path from 'hg debuginstall'):

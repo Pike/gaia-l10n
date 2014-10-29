@@ -1,1 +1,1 @@
-This repo powers up https://gaia-l10n.paas.allizom.org/.
+This repo powers up https://gaia-l10n.allizom.org/.

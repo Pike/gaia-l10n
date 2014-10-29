@@ -1,0 +1,3 @@
+mercurial==3.0.1
+hg+https://bitbucket.org/pike/gaiaconv#egg=gaiaconv
+python-hglib
