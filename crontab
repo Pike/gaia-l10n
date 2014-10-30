@@ -1,2 +1,2 @@
-*/15  *  *  *  *  cd $HOME/gaia-l10n; python2.7 run-conversions.py repos.txt /mnt/data/source/integration/ /var/www/app/target/integration/ /var/www/app/target/gaia-shamaps/
-10    0  *  *  *  hg -R/var/www/app/target/gaia-shamaps/ commit -m"`date "+Migration: %Y-%m-%d"`"
+*/15  *  *  *  *  cd $HOME/gaia-l10n; umask 0022; python2.7 run-conversions.py repos.txt /mnt/data/source/integration/ /var/www/app/target/integration/ /var/www/app/target/gaia-shamaps/ >> /var/www/app/logs/cron.log
+10    0  *  *  *  hg -R/var/www/app/target/gaia-shamaps/ commit -m"`date "+Migration: %Y-%m-%d"`"  >> /var/www/app/logs/cron.log
