@@ -1,5 +1,2 @@
 gaia-central
-gaia-1_4
-gaia-2_0
-gaia-2_1
 gaia-2_2
